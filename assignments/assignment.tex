@@ -1,0 +1,78 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Assignment Template
+% Author: Jesús González Abril
+%
+% Answers are formatted in blue, questions are auto-numbered.
+%
+% Custom variables:
+%   \qtext  - Text displayed in the header of each section. 
+%
+% Custom commands:
+%   \q      - Starts a new question section, clears the page, and increments the question counter.
+%   \ans    - Changes text color to blue for writing answers.
+%   \NN, \ZZ, \QQ, \RR, \CC - Shorthand for common number sets using \mathbb.
+%
+% Example:
+%   \q
+%   Write the question description here.
+%
+%   \ans
+%   Write the answer here.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt]{article}
+
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry} % Page dimensions
+
+%% Packages %%
+\usepackage[english]{babel} % Language support
+\usepackage{parskip}
+\usepackage{cancel}
+\usepackage{xcolor}
+\usepackage{amsmath} % Necessary
+\usepackage{amssymb} % Necessary
+\usepackage{amsthm} % Necessary
+\usepackage{amsfonts} % Necessary
+\usepackage{hyperref} % Automatically turns all internal references to links
+\usepackage{fancyhdr} % Allows for headers and footers
+
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\CC}{\mathbb{C}}
+
+\newcounter{qcounter}
+\setcounter{qcounter}{1}
+
+\def \qtext {Question}
+
+\newcommand{\q}{\clearpage \color{black} \section*{\qtext\ {\theqcounter}} \stepcounter{qcounter}}
+
+\newcommand{\ans}{\color{blue}}
+
+\pagestyle{fancy}
+\lhead{Jesús González Abril}
+\rhead{Subject - Assignment X}
+
+%% Document %%
+
+\begin{document}
+
+\q 
+Description of the question
+
+\ans
+Answer
+
+\q
+Description of the question
+
+\ans
+Answer
+
+\end{document}
+
+
+
