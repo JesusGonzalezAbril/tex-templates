@@ -1,0 +1,83 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lecture Notes Template
+% Author: Jesús González Abril
+%
+% Custom environments:
+%   definition, theorem, lemma, corollary
+%     - All share a common numbering scheme, reset by section.
+%     - Styled with upright body text (definition style).
+%
+% Custom commands:
+%   \lec{<date or title>} 
+%     - Starts a new lecture section with violet-colored heading.
+%     - Automatically increments lecture number.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{report}
+
+\usepackage[a4paper,top=3cm,bottom=3cm,left=3cm,right=3cm,marginparwidth=2cm]{geometry} % Page dimensions
+
+\usepackage[english]{babel}
+\usepackage{amsmath} 
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{xcolor}
+
+%% Theorem macros %%
+\theoremstyle{definition}
+
+\newtheorem{definition}{Definition}[section] % Numbered within section
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{lemma}[definition]{Lemma} 
+\newtheorem{corollary}[definition]{Corollary}
+
+%% Lecture counter %%
+\newcounter{lecture}
+\newcommand{\lec}[1]{
+    \stepcounter{lecture}
+    \subsection*{\color{orange} Lecture \thelecture\ - #1}
+}
+
+\title{
+    Notes \\
+    \vspace{1cm} \large Institute name
+}
+
+\author{Jesús González Abril}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\chapter{Lecture Notes}
+\section{Introduction}
+
+\lec{May 24}
+
+\begin{definition}
+    Definition text.
+\end{definition}
+
+\begin{theorem}
+    Theorem text.
+\end{theorem}
+
+\begin{proof}
+    Proof.
+\end{proof}
+
+\begin{corollary}
+    Corollary text.
+\end{corollary}
+
+\begin{lemma}
+    Lemma text.
+\end{lemma}
+
+\begin{definition}
+    Another definition text.
+\end{definition}
+
+\end{document}
