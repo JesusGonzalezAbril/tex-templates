@@ -1,8 +1,24 @@
-# LaTeX Templates
-My LaTeX templates for notes. Mainly suited for math related subjects.
+# LaTeX Templates Collection  
 
-## Previews from each folder
-* `\assignments`: [Assignment](<https://github.com/JesusGonzalezAbril/tex-templates/blob/main/assignments/assignment.pdf?raw=true>)
-* `\notes`: [Simple Notes](<https://github.com/JesusGonzalezAbril/tex-templates/blob/main/notes/simple-notes.pdf?raw=true>)
+My LaTeX templates for academic and technical documents.
 
-## References
+## Template Gallery  
+
+### 1. Notes
+![Notes Template](screenshots/notes-template.png)  
+
+### 2. Assignments  
+![Assignment Template](screenshots/assignment-template.png)  
+
+### 3. Books  
+![Book Template](screenshots/book-template.png)  
+
+
+## Contact  
+For questions or suggestions:  
+- Open an issue on GitHub  
+- Email: jesusgzabril@gmail.com
+
+---
+
+⭐ Star this repo if you find it useful!
