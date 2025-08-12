@@ -17,7 +17,6 @@ My LaTeX templates for academic and technical documents.
 ## Contact  
 For questions or suggestions:  
 - Open an issue on GitHub  
-- Email: jesusgzabril@gmail.com
 
 ---
 
