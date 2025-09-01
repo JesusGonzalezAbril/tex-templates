@@ -1,0 +1,99 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Solutions Template
+% Author: Jesús González Abril
+%
+% A template for creating answer sets to problems.
+%
+% Custom commands:
+%   \problem{problem}{answer}   - Creates a problem section with answer
+%   \NN, \ZZ, \QQ, \RR, \CC     - Shorthand for common number sets
+%
+%
+% Example usage:
+%   \problem{
+%       Example problem statement.
+%   }{
+%       Detailed answer with explanations.
+%   }
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt]{article}
+
+\usepackage[a4paper,top=3cm,bottom=3cm,left=3cm,right=3cm,marginparwidth=2cm]{geometry} % Page dimensions
+
+% Packages
+\usepackage[english]{babel} % Language support
+\usepackage{parskip}
+\usepackage{cancel} % Cancel terms in equations
+\usepackage{xcolor}
+\usepackage{amsmath, amssymb, amsthm, amsfonts} % Math
+\usepackage{hyperref} % Automatically turns all internal references to links
+\usepackage{fancyhdr} % Allows for headers and footers
+
+% Custom color boxes
+\usepackage{framed}
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems,skins,breakable}
+
+\newcommand{\problemword}{Problem}
+\newcommand{\answerword}{Answer}
+
+\newtcbtheorem[]{myproblem}{\problemword}
+{
+    enhanced,
+    frame hidden,
+    titlerule=0mm,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    fonttitle=\bfseries\large,
+    coltitle=black,
+    colbacktitle=cyan!20!white,
+    colback=cyan!10!white,
+}{thm}
+
+\newenvironment{myanswer}{
+	{\noindent{\it \textbf{\answerword}}}
+	\tcolorbox[blanker,breakable,left=5mm,parbox=false,
+    before upper={\parindent15pt},
+    after skip=10pt,
+	borderline west={1mm}{0pt}{cyan!20!white}]
+}{
+    \textcolor{cyan!20!white}{\hbox{}\nobreak\hfill$\blacksquare$} 
+    \endtcolorbox
+}
+
+\NewDocumentCommand{\problem}{m+m}{
+    \begin{myproblem}{}{}
+        #1
+    \end{myproblem}
+
+    \begin{myanswer}
+        #2
+    \end{myanswer}
+}
+
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\CC}{\mathbb{C}}
+
+\pagestyle{fancy}
+\lhead{Jesús González Abril}
+\rhead{Subject - Answers X}
+
+% Document
+
+\begin{document}
+
+\problem{
+    Example of problem.
+}{
+    Answer to the problem.
+}
+
+\end{document}
+
+
+
